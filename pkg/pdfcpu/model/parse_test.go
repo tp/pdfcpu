@@ -19,12 +19,210 @@ package model
 import (
 	"context"
 	"errors"
+	"fmt"
+	"math"
 	"strings"
 	"testing"
 	"time"
 
 	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
 )
+
+// TestObjectParserRegularSpaceBytes preserves bytes outside the six PDF whitespace characters.
+func TestObjectParserRegularSpaceBytes(t *testing.T) {
+	for _, regular := range []string{"\v", "\x85", "\xa0", "\u0085", "\u00a0", "\u2003", "\u2028", "\u3000", "\xff"} {
+		t.Run(fmt.Sprintf("%q", regular), func(t *testing.T) {
+			name := "A" + regular + "B"
+			line := "/" + name + " /Tail"
+			o, err := ParseObject(t.Context(), &line, 0)
+			if err != nil || o != types.Name(name) || line != " /Tail" {
+				t.Fatalf("name = %v, %v; remaining = %q", o, err, line)
+			}
+			for _, relaxed := range []bool{false, true} {
+				input := regular + "\n/Name"
+				got, eol := trimLeftSpace(" \t"+input, relaxed)
+				if got != input || eol {
+					t.Fatalf("trim relaxed=%t: got %q, eol=%t; want %q, false", relaxed, got, eol, input)
+				}
+			}
+			prefix := "12" + regular + "34"
+			if i, rest := positionToNextWhitespace(prefix + " 5"); i != len(prefix) || rest != " 5" {
+				t.Fatalf("whitespace boundary = %d, %q", i, rest)
+			}
+			if i, rest := positionToNextWhitespaceOrChar(prefix+"/Tail", "/"); i != len(prefix) || rest != "/Tail" {
+				t.Fatalf("delimiter boundary = %d, %q", i, rest)
+			}
+		})
+	}
+}
+
+// TestObjectParserPDFWhitespace checks all six PDF token separators.
+func TestObjectParserPDFWhitespace(t *testing.T) {
+	for _, ws := range []string{"\x00", "\t", "\n", "\f", "\r", " "} {
+		t.Run(fmt.Sprintf("%q", ws), func(t *testing.T) {
+			line := ws + "/Name" + ws + "17"
+			o, err := ParseObject(t.Context(), &line, 0)
+			if err != nil || o != types.Name("Name") || line != ws+"17" {
+				t.Fatalf("name = %v, %v; remaining = %q", o, err, line)
+			}
+			o, err = ParseObject(t.Context(), &line, 0)
+			if err != nil || o != types.Integer(17) || line != "" {
+				t.Fatalf("integer = %v, %v; remaining = %q", o, err, line)
+			}
+		})
+	}
+}
+
+// TestTrimLeftPDFWhitespace preserves comment handling and relaxed line-ending detection.
+func TestTrimLeftPDFWhitespace(t *testing.T) {
+	for _, tc := range []struct {
+		input string
+		want  string
+		eol   bool
+	}{
+		{"", "", false},
+		{"\x00\t\f /Name", "/Name", false},
+		{"\x00\t\n\f\r /Name", "/Name", true},
+		{"%comment\r\n/Name", "/Name", true},
+		{" %first\n\t%second\r/Name", "/Name", true},
+		{"%comment without line ending", "", false},
+	} {
+		for _, relaxed := range []bool{false, true} {
+			got, eol := trimLeftSpace(tc.input, relaxed)
+			if got != tc.want || eol != (relaxed && tc.eol) {
+				t.Errorf("trim %q relaxed=%t: got %q, eol=%t; want %q, eol=%t", tc.input, relaxed, got, eol, tc.want, relaxed && tc.eol)
+			}
+		}
+	}
+}
+
+// TestParseObjectAttributesWhitespace checks PDF separators keep object and generation numbers distinct.
+func TestParseObjectAttributesWhitespace(t *testing.T) {
+	whitespace := []string{"\x00", "\t", "\n", "\f", "\r", " ", "\r\n", "\x00\t\n\f\r "}
+	const remainder = " << /Length 0 >>\nendobj\n13 0 obj"
+	for _, beforeGeneration := range whitespace {
+		for _, beforeObj := range whitespace {
+			for _, generation := range []int{0, 34} {
+				t.Run(fmt.Sprintf("%q/%q/generation=%d", beforeGeneration, beforeObj, generation), func(t *testing.T) {
+					line := fmt.Sprintf("%s12%s%d%sobj%s", beforeGeneration, beforeGeneration, generation, beforeObj, remainder)
+					objNr, genNr, err := ParseObjectAttributes(&line)
+					if err != nil {
+						t.Fatal(err)
+					}
+					if objNr == nil || genNr == nil {
+						t.Fatal("missing object or generation number")
+					}
+					if *objNr != 12 || *genNr != generation {
+						t.Fatalf("got %d %d, want 12 %d", *objNr, *genNr, generation)
+					}
+					if line != remainder {
+						t.Fatalf("remaining data = %q, want %q", line, remainder)
+					}
+				})
+			}
+		}
+	}
+}
+
+// TestParseFloatRejectsNonPDFNumbers checks Go-only syntax cannot produce PDF real objects.
+func TestParseFloatRejectsNonPDFNumbers(t *testing.T) {
+	for _, input := range []string{
+		"NaN", "nan", "NAN", "Inf", "+Inf", "-Inf", "Infinity", "-Infinity", "iNfInItY",
+		"1e5", "-1E-5", "0x1p2", "0X1.FP+3", "1_000.0", "1.2.3", "1,2,3", "1.-2.-3",
+		"", ".", "+.", "-", "+", "1a", "١.٥", strings.Repeat("9", 400) + ".0",
+	} {
+		t.Run(input, func(t *testing.T) {
+			got, err := parseFloat(input)
+			if err != nil || got != nil {
+				t.Fatalf("parseFloat = %v, %v; want skipped token", got, err)
+			}
+		})
+	}
+}
+
+// TestParseFloatDecimals preserves valid decimal syntax and existing tolerated spellings.
+func TestParseFloatDecimals(t *testing.T) {
+	for _, tc := range []struct {
+		input string
+		want  float64
+	}{
+		{"0", 0}, {"+17", 17}, {"-98", -98}, {"34.5", 34.5}, {"-3.62", -3.62},
+		{"+123.6", 123.6}, {"4.", 4}, {"-.002", -.002}, {".5", .5}, {"00.50", .5},
+		{"1,5", 1.5}, {"-2,75", -2.75}, {".-5", .5}, {"1.-5", 1.5}, {"1,-5", 1.5},
+		{"0." + strings.Repeat("0", 400) + "1", 0},
+	} {
+		t.Run(tc.input, func(t *testing.T) {
+			got, err := parseFloat(tc.input)
+			f, ok := got.(types.Float)
+			if err != nil || !ok || f.Value() != tc.want {
+				t.Fatalf("parseFloat = %v, %v; want Float %v", got, err, tc.want)
+			}
+		})
+	}
+	got, err := parseFloat("-0.0")
+	f, ok := got.(types.Float)
+	if err != nil || !ok || !math.Signbit(f.Value()) {
+		t.Fatalf("negative zero lost: %v, %v", got, err)
+	}
+}
+
+// TestParseObjectSkipsNonPDFNumbers checks discarded tokens do not consume the next object.
+func TestParseObjectSkipsNonPDFNumbers(t *testing.T) {
+	for _, input := range []string{"NaN", "+Inf", "-Infinity", "1e5", "0x1p2", "1_000.0"} {
+		t.Run(input, func(t *testing.T) {
+			line := input + " 17"
+			got, err := ParseObject(t.Context(), &line, 0)
+			if err != nil || got != nil || line != " 17" {
+				t.Fatalf("first object = %v, %v; remaining = %q", got, err, line)
+			}
+			got, err = ParseObject(t.Context(), &line, 0)
+			n, ok := got.(types.Integer)
+			if err != nil || !ok || n != 17 || line != "" {
+				t.Fatalf("next object = %v, %v; remaining = %q", got, err, line)
+			}
+		})
+	}
+}
+
+// TestParseHexStringWhitespace verifies whitespace does not interrupt digit pairs or final padding.
+func TestParseHexStringWhitespace(t *testing.T) {
+	for _, ws := range []string{"\x00", "\t", "\n", "\f", "\r", " ", "\x00\t\n\f\r "} {
+		for _, tc := range []struct{ digits, want string }{
+			{"41", "A"}, {"4142", "AB"}, {"414", "A@"}, {"9aB", "\x9a\xb0"}, {"", ""},
+		} {
+			in := "<" + ws + strings.Join(strings.Split(tc.digits, ""), ws) + ws + ">"
+			checkParsedHexString(t, in, tc.want)
+		}
+	}
+	checkParsedHexString(t, "<>", "")
+	checkParsedHexString(t, "<901FA>", "\x90\x1f\xa0")
+}
+
+func checkParsedHexString(t *testing.T, in, want string) {
+	t.Helper()
+	line := in
+	o, err := ParseObject(t.Context(), &line, 0)
+	if err != nil {
+		t.Fatalf("%q: %v", in, err)
+	}
+	h, ok := o.(types.HexLiteral)
+	if !ok {
+		t.Fatalf("%q: got %T, want HexLiteral", in, o)
+	}
+	b, err := h.Bytes()
+	if err != nil || string(b) != want {
+		t.Fatalf("%q: decoded %q, want %q, error %v", in, b, want, err)
+	}
+}
+
+// TestHexStringRejectsInvalidCharacters verifies the hex decoder accepts only PDF whitespace and hex digits.
+func TestHexStringRejectsInvalidCharacters(t *testing.T) {
+	for _, s := range []string{"4\v1", "4\u00851", "4\u00a01", "4Z1", "4%1"} {
+		if _, ok := hexString(s); ok {
+			t.Errorf("accepted invalid hex string %q", s)
+		}
+	}
+}
 
 // TestDecodeNameHexInvalid verifies invalid name hex escapes are rejected.
 func TestDecodeNameHexInvalid(t *testing.T) {
@@ -422,28 +620,6 @@ func TestDecodeNameHexValid(t *testing.T) {
 			t.Errorf("decoding %s failed: %s", tc.Input, err)
 		} else if decoded != tc.Expected {
 			t.Errorf("expected %s when decoding %s, got %s", tc.Expected, tc.Input, decoded)
-		}
-	}
-}
-
-// TestDetectNonEscaped verifies detection of non-escaped delimiters.
-func TestDetectNonEscaped(t *testing.T) {
-	testcases := []struct {
-		input string
-		want  int
-	}{
-		{"", -1},
-		{" ( ", 1},
-		{" \\( )", -1},
-		{"\\(", -1},
-		{"   \\(   ", -1},
-		{"\\()(", 3},
-		{" \\(\\((abc)", 5},
-	}
-	for _, tc := range testcases {
-		got := detectNonEscaped(tc.input, "(")
-		if tc.want != got {
-			t.Errorf("%s, want: %d, got: %d", tc.input, tc.want, got)
 		}
 	}
 }

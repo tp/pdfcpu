@@ -275,6 +275,94 @@ func TestSupportedEncryptionClassifiesRevision7Unsupported(t *testing.T) {
 	}
 }
 
+// TestSupportedEncryptionValidatesVAndR checks that key size and security-handler revision agree.
+func TestSupportedEncryptionValidatesVAndR(t *testing.T) {
+	tests := []struct {
+		name      string
+		version   model.Version
+		keyLength int
+		revision  int
+		malformed bool
+	}{
+		{"PDF 1.7 V5 R2", model.V17, 256, 2, true},
+		{"PDF 1.7 V5 R3", model.V17, 256, 3, true},
+		{"PDF 1.7 V5 R4", model.V17, 256, 4, true},
+		{"PDF 2.0 V5 R4", model.V20, 256, 4, true},
+		{"PDF 1.7 V4 R5", model.V17, 128, 5, true},
+		{"PDF 1.7 V4 R6", model.V17, 128, 6, true},
+		// Preserve legacy R5 handling without asserting that an extension was declared.
+		{"legacy V5 R5 compatibility", model.V17, 256, 5, false},
+		{"PDF 2.0 V5 R6", model.V20, 256, 6, false},
+		{"PDF 1.7 V4 R4", model.V17, 128, 4, false},
+	}
+	for _, tc := range tests {
+		t.Run(tc.name, func(t *testing.T) {
+			ctx, err := model.NewContext(bytes.NewReader(nil), nil)
+			if err != nil {
+				t.Fatal(err)
+			}
+			ctx.XRefTable.HeaderVersion = &tc.version
+			ctx.XRefTable.ValidationMode = model.ValidationRelaxed
+
+			d := newEncryptDict(tc.version == model.V20, true, tc.keyLength, -4)
+			d["R"] = types.Integer(tc.revision)
+			if tc.keyLength == 128 && tc.revision >= 5 {
+				d["O"] = types.NewHexLiteral(make([]byte, 48))
+				d["U"] = types.NewHexLiteral(make([]byte, 48))
+				d["OE"] = types.NewHexLiteral(make([]byte, 32))
+				d["UE"] = types.NewHexLiteral(make([]byte, 32))
+				d["Perms"] = types.NewHexLiteral(make([]byte, 16))
+			}
+
+			_, err = supportedEncryption(ctx, d)
+			if tc.malformed {
+				if !errors.Is(err, ErrMalformedEncryption) {
+					t.Fatalf("got %v, want %v", err, ErrMalformedEncryption)
+				}
+				return
+			}
+			if err != nil {
+				t.Fatal(err)
+			}
+		})
+	}
+}
+
+// TestSetupEncryptionKeyRejectsV5R4 checks that an inconsistent dictionary returns an error instead of panicking.
+func TestSetupEncryptionKeyRejectsV5R4(t *testing.T) {
+	ctx, err := model.NewContext(bytes.NewReader(nil), nil)
+	if err != nil {
+		t.Fatal(err)
+	}
+	v := model.V17
+	ctx.XRefTable.HeaderVersion = &v
+	ctx.XRefTable.ValidationMode = model.ValidationRelaxed
+
+	d := newEncryptDict(false, true, 256, -4)
+	d["R"] = types.Integer(4)
+	if err := setupEncryptionKey(ctx, d); !errors.Is(err, ErrMalformedEncryption) {
+		t.Fatalf("got %v, want %v", err, ErrMalformedEncryption)
+	}
+}
+
+// TestExtractPermissionUsesCopyBit checks that accessibility permission does not authorize general extraction.
+func TestExtractPermissionUsesCopyBit(t *testing.T) {
+	const copyBit, accessibilityBit = 1 << 4, 1 << 9
+	base := int(int32(-4)) &^ (copyBit | accessibilityBit)
+	for _, revision := range []int{2, 3, 4, 5, 6} {
+		t.Run(fmt.Sprintf("R%d", revision), func(t *testing.T) {
+			denied := &model.Enc{R: revision, P: base | accessibilityBit}
+			if hasNeededPermissions(model.EXTRACTCONTENT, denied) {
+				t.Fatal("general extraction allowed without copy permission")
+			}
+			granted := &model.Enc{R: revision, P: base | copyBit}
+			if !hasNeededPermissions(model.EXTRACTCONTENT, granted) {
+				t.Fatal("general extraction denied despite copy permission")
+			}
+		})
+	}
+}
+
 func TestValidateCryptFilterRecipientsIncludesEntryContext(t *testing.T) {
 	ctx, err := model.NewContext(bytes.NewReader(nil), nil)
 	if err != nil {
@@ -332,6 +420,55 @@ func TestValidateCryptFilterRejectsEFOpenForNonEmbeddedFiles(t *testing.T) {
 	_, err = validateCryptFilter(ctx, d, 5, false, false, false, &specViolations)
 	if !errors.Is(err, ErrMalformedEncryption) {
 		t.Fatalf("got %v, want %v", err, ErrMalformedEncryption)
+	}
+}
+
+// TestCryptFilterLengthsIgnoresIdentity preserves the predefined Identity filter even if CF tries to redefine it.
+func TestCryptFilterLengthsIgnoresIdentity(t *testing.T) {
+	ctx, err := model.NewContext(bytes.NewReader(nil), model.NewDefaultConfiguration())
+	if err != nil {
+		t.Fatal(err)
+	}
+	v := model.V20
+	ctx.HeaderVersion = &v
+	ctx.E = &model.Enc{V: 5, R: 6}
+	ctx.Encrypt = types.NewIndirectRef(1, 0)
+	ctx.Table[1] = model.NewXRefTableEntryGen0(types.Dict{
+		"CF": types.Dict{"Identity": types.Integer(42)},
+	})
+	if err := validateEncryptionVersion(t.Context(), ctx); err != nil {
+		t.Fatal(err)
+	}
+}
+
+// TestEncryptionSetupWithoutPDFVersion ensures bootstrap checks do not consult an undiscovered input version.
+func TestEncryptionSetupWithoutPDFVersion(t *testing.T) {
+	for _, tc := range []struct {
+		name                string
+		keyLength, revision int
+		wantErr             error
+	}{
+		{"AES128", 128, 4, nil},
+		{"Adobe AES256", 256, 5, nil},
+		{"AES256 revision 6", 256, 6, nil},
+		{"unsupported revision", 256, 7, ErrUnsupportedEncryptionFeature},
+		{"invalid revision", 256, 8, ErrMalformedEncryption},
+		{"incompatible V and R", 256, 4, ErrMalformedEncryption},
+	} {
+		t.Run(tc.name, func(t *testing.T) {
+			ctx, err := model.NewContext(bytes.NewReader(nil), model.NewDefaultConfiguration())
+			if err != nil {
+				t.Fatal(err)
+			}
+			ctx.HeaderVersion = nil
+			ctx.XRefTable.ValidationMode = model.ValidationStrict
+			d := newEncryptDict(false, true, tc.keyLength, -4)
+			d["R"] = types.Integer(tc.revision)
+			_, err = supportedEncryption(ctx, d)
+			if !errors.Is(err, tc.wantErr) {
+				t.Fatalf("got %v, want %v", err, tc.wantErr)
+			}
+		})
 	}
 }
 

@@ -22,13 +22,50 @@ import (
 	"errors"
 	"io"
 	"path/filepath"
+	"slices"
 	"strings"
 	"testing"
 
 	"github.com/pdfcpu/pdfcpu/pkg/font"
 	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model"
+	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/primitives"
 	"github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types"
 )
+
+// TestChoiceSelectionIndices verifies blank options retain their positions for single and multiple selections.
+func TestChoiceSelectionIndices(t *testing.T) {
+	for _, tc := range []struct {
+		name   string
+		multi  bool
+		values []string
+		want   []int
+	}{
+		{"blank", false, []string{""}, []int{0}},
+		{"after blanks", false, []string{"b"}, []int{3}},
+		{"multiple", true, []string{"a", "b"}, []int{1, 3}},
+		{"empty", false, nil, nil},
+	} {
+		t.Run(tc.name, func(t *testing.T) {
+			d := types.Dict{"Opt": types.Array{types.StringLiteral(""), types.StringLiteral("a"), types.StringLiteral(""), types.StringLiteral("b")}}
+			opts, err := parseChoiceOptions(emptyFormContext(t).XRefTable, d)
+			if err != nil {
+				t.Fatal(err)
+			}
+			ind, err := updateListBoxValues(tc.multi, d, opts, tc.values)
+			if err != nil {
+				t.Fatal(err)
+			}
+			if len(ind) != len(tc.want) {
+				t.Fatalf("indices = %v, want %v", ind, tc.want)
+			}
+			for i, want := range tc.want {
+				if ind[i] != types.Integer(want) {
+					t.Fatalf("indices = %v, want %v", ind, tc.want)
+				}
+			}
+		})
+	}
+}
 
 func useMissingGlobalFontDirectory(t *testing.T) {
 	t.Helper()
@@ -195,10 +232,87 @@ func TestFillFormRejectsInvalidCallbacksAndFormats(t *testing.T) {
 	}
 }
 
+// TestFillFormClearsSingleSelectListBox verifies that an empty JSON value clears a list box without panicking.
+func TestFillFormClearsSingleSelectListBox(t *testing.T) {
+	ctx := emptyFormContext(t)
+	ctx.Table[0] = model.NewFreeHeadXRefTableEntry()
+	lb := types.Dict{
+		"Type":    types.Name("Annot"),
+		"Subtype": types.Name("Widget"),
+		"Rect":    types.NewRectangle(0, 0, 10, 10).Array(),
+		"FT":      types.Name("Ch"),
+		"T":       types.StringLiteral("lb"),
+		"I":       types.Array{types.Integer(0)},
+		"V":       types.StringLiteral("a"),
+		"DA":      types.StringLiteral("/Helv 12 Tf 0 g"),
+		"Opt":     types.Array{types.StringLiteral("a"), types.StringLiteral("b")},
+	}
+	ir, err := ctx.IndRefForObject(len(ctx.Table)+1, lb)
+	if err != nil {
+		t.Fatal(err)
+	}
+	ctx.Form = types.Dict{"Fields": types.Array{*ir}}
+	ctx.PageCount = 1
+	refs := []types.IndirectRef{*ir}
+	ctx.PageAnnots = map[int]model.PgAnnots{1: {model.AnnWidget: model.Annot{IndRefs: &refs}}}
+	size := len(ctx.Table)
+	ctx.Size = &size
+
+	form := &Form{ListBoxes: []*ListBox{{ID: "1", Name: "lb"}}}
+	ok, _, err := FillForm(t.Context(), ctx, FillDetails(form, nil), nil, JSON)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !ok {
+		t.Fatal("list box was not updated")
+	}
+	for _, key := range []string{"I", "V"} {
+		if _, found := lb.Find(key); found {
+			t.Fatalf("entry %s remains after clearing list box", key)
+		}
+	}
+}
+
 func TestFillDetailsHandlesNilForm(t *testing.T) {
 	fillDetails := FillDetails(nil, nil)
 	if values, _, found := fillDetails("1", "field", FTText, JSON); found || values != nil {
 		t.Fatalf("expected missing field, got values=%v found=%t", values, found)
+	}
+}
+
+// TestFillDetailsMatchesUnnamedFieldsByID verifies that an empty name cannot match a different JSON field.
+func TestFillDetailsMatchesUnnamedFieldsByID(t *testing.T) {
+	form := &Form{
+		TextFields:        []*TextField{{ID: "1", Value: "a"}, {ID: "2", Value: "b"}},
+		DateFields:        []*DateField{{ID: "1", Value: "a"}, {ID: "2", Value: "b"}},
+		CheckBoxes:        []*CheckBox{{ID: "1"}, {ID: "2", Value: true}},
+		RadioButtonGroups: []*RadioButtonGroup{{ID: "1", Value: "a"}, {ID: "2", Value: "b"}},
+		ComboBoxes:        []*ComboBox{{ID: "1", Value: "a"}, {ID: "2", Value: "b"}},
+		ListBoxes:         []*ListBox{{ID: "1", Values: []string{"a"}}, {ID: "2", Values: []string{"b"}}},
+	}
+	fillDetails := FillDetails(form, nil)
+	tests := []struct {
+		name string
+		kind FieldType
+		want []string
+	}{
+		{name: "text", kind: FTText, want: []string{"b"}},
+		{name: "date", kind: FTDate, want: []string{"b"}},
+		{name: "check box", kind: FTCheckBox, want: []string{"t"}},
+		{name: "radio group", kind: FTRadioButtonGroup, want: []string{"b"}},
+		{name: "combo box", kind: FTComboBox, want: []string{"b"}},
+		{name: "list box", kind: FTListBox, want: []string{"b"}},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			values, _, found := fillDetails("2", "", tt.kind, JSON)
+			if !found || !slices.Equal(values, tt.want) {
+				t.Fatalf("field 2: got %v, found=%t; want %v", values, found, tt.want)
+			}
+			if values, _, found := fillDetails("3", "", tt.kind, JSON); found {
+				t.Fatalf("unknown field 3 matched: %v", values)
+			}
+		})
 	}
 }
 
@@ -291,6 +405,7 @@ func TestRadioButtonNameConsumersPreserveLiteralHash(t *testing.T) {
 	d := types.Dict{
 		"DV":   types.Name(state),
 		"V":    types.Name(state),
+		"Ff":   types.Integer(primitives.FieldRadio),
 		"Kids": types.Array{kid1, kid2},
 	}
 	ctx := emptyFormContext(t)
