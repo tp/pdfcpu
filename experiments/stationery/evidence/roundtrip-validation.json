@@ -12,7 +12,7 @@
   "buildDate" : 1791381120000
 }]},"jobs":[{"itemDetails":{
   "name" : "/root/worktrees/pdfcpu-2787-stationery/experiments/stationery/out/roundtrip.pdf",
-  "size" : 21548
+  "size" : 21547
 },"validationResult":[ {
   "details" : {
     "passedRules" : 153,
@@ -38,16 +38,16 @@
   "statement" : "PDF file is compliant with Validation Profile requirements.",
   "compliant" : true
 } ],"processingTime":{
-  "start" : 1792054619540,
-  "finish" : 1792054620739,
-  "duration" : "00:00:01.199",
-  "difference" : 1199
+  "start" : 1792059419167,
+  "finish" : 1792059420693,
+  "duration" : "00:00:01.526",
+  "difference" : 1526
 }}],"batchSummary":{
   "duration" : {
-    "start" : 1792054619347,
-    "finish" : 1792054620780,
-    "duration" : "00:00:01.433",
-    "difference" : 1433
+    "start" : 1792059418973,
+    "finish" : 1792059420773,
+    "duration" : "00:00:01.800",
+    "difference" : 1800
   },
   "totalJobs" : 1,
   "outOfMemory" : 0,

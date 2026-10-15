@@ -12,7 +12,7 @@
   "buildDate" : 1791381120000
 }]},"jobs":[{"itemDetails":{
   "name" : "/root/worktrees/pdfcpu-2787-stationery/experiments/stationery/out/composed.pdf",
-  "size" : 35901
+  "size" : 35890
 },"validationResult":[ {
   "details" : {
     "passedRules" : 153,
@@ -38,16 +38,16 @@
   "statement" : "PDF file is compliant with Validation Profile requirements.",
   "compliant" : true
 } ],"processingTime":{
-  "start" : 1792054626215,
-  "finish" : 1792054627540,
-  "duration" : "00:00:01.325",
-  "difference" : 1325
+  "start" : 1792059426997,
+  "finish" : 1792059429186,
+  "duration" : "00:00:02.189",
+  "difference" : 2189
 }}],"batchSummary":{
   "duration" : {
-    "start" : 1792054626019,
-    "finish" : 1792054627595,
-    "duration" : "00:00:01.576",
-    "difference" : 1576
+    "start" : 1792059426762,
+    "finish" : 1792059429251,
+    "duration" : "00:00:02.489",
+    "difference" : 2489
   },
   "totalJobs" : 1,
   "outOfMemory" : 0,

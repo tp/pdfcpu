@@ -1,5 +1,5 @@
 === RUN   TestPreparedStationeryPreservesContentAndStructure
---- PASS: TestPreparedStationeryPreservesContentAndStructure (0.03s)
+--- PASS: TestPreparedStationeryPreservesContentAndStructure (0.02s)
 === RUN   TestPreparedStationeryRejectsUnsupportedInputs
 === RUN   TestPreparedStationeryRejectsUnsupportedInputs/untagged
 === RUN   TestPreparedStationeryRejectsUnsupportedInputs/annotation
@@ -23,28 +23,28 @@
 === RUN   TestPreparedStationeryRejectsUnsupportedInputs/different-profile
 === RUN   TestPreparedStationeryRejectsUnsupportedInputs/multipage
 === RUN   TestPreparedStationeryRejectsUnsupportedInputs/cancelled
---- PASS: TestPreparedStationeryRejectsUnsupportedInputs (0.19s)
+--- PASS: TestPreparedStationeryRejectsUnsupportedInputs (0.16s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/untagged (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/annotation (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/rotation (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/crop (0.01s)
-    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/origin (0.01s)
+    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/origin (0.00s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/destination-geometry (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/destination-user-unit (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/javascript (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/attachment (0.01s)
-    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/layers (0.00s)
-    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/unsupported-role (0.00s)
-    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/paragraph-attribute (0.00s)
+    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/layers (0.01s)
+    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/unsupported-role (0.01s)
+    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/paragraph-attribute (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/document-attribute (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/remapped-role (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/parent-tree-limits (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/duplicate-mcid (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/missing-mcid (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/parent-tree (0.01s)
-    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/cmyk-profile (0.00s)
+    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/cmyk-profile (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/different-profile (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/multipage (0.01s)
     --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/cancelled (0.01s)
 PASS
-ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu	0.234s
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu	0.189s

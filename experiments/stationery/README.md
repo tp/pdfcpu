@@ -1,8 +1,8 @@
 # Prepared PDF stationery proof
 
 Tracked in [revisionist_writer #2787](https://github.com/LunaONE/revisionist_writer/issues/2787).
-This is an AI-assisted experiment authored with Codex, based on pdfcpu **v0.16.1**,
-commit **2f7a89a0a69c117a5252601907ff9f31ac4c70f2**. It is not integrated into the
+This is an AI-assisted experiment authored with Codex, based on pdfcpu **v0.16.2**,
+commit **b41a41d5323f6119ff6a183ad3f287eb4a20a617**. It is not integrated into the
 application or a general-purpose PDF/A converter. Upstream's contribution policy
 excludes AI-assisted submissions; this work must not be submitted upstream.
 
@@ -32,8 +32,8 @@ PDF/A-2a and PDF/UA-1 on the tested corpus.
 4. **Independent validation — automated gates passed; real-document audit open.**
    veraPDF 1.30.3 checks both declared profiles on the exact final files. Negative
    controls also prove that conformance alone is insufficient. A local fork,
-   sources and evidence are available. The user explicitly directed that the fork
-   and any PR remain unpublished during this investigation.
+   sources and evidence are available. The user authorized publishing this experiment
+   branch to their fork at https://github.com/tp/pdfcpu. No upstream PR is planned.
 
 ## What the fork changes
 
@@ -128,11 +128,14 @@ qpdf visual references and Go test output. `out/` is ignored. Representative res
 and the machine-readable summary are saved under `evidence/`. Negative PDFs are
 clearly named controls and must never be delivered to users.
 
-The full `pkg/pdfcpu` and `pkg/api` test run has one environment failure when run as
-root: upstream `TestInspectConfigurationReportsReadOnlyPaths` expects chmod to make
-paths unwritable, which root bypasses. It also fails on the unmodified v0.16.1
-checkout. The remainder passes with only that test excluded. This is not a claim
-that the complete upstream repository test suite was run.
+Validation after updating the fork to v0.16.2: `go test ./pkg/... -count=1
+-skip '^TestInspectConfigurationReportsReadOnlyPaths$'` passed every package except
+the API/CLI corpus packages, whose startup encountered a pre-existing schema-0
+configuration under `/root/.config`. Both passed when rerun with a fresh
+`XDG_CONFIG_HOME`. The excluded read-only-path test assumes chmod prevents writes,
+which does not hold as root; its failure was previously reproduced on unmodified
+v0.16.1. Logs for both runs are in `evidence/`. The compositor's independent
+veraPDF/text/structure/pixel acceptance runner and `go vet` also pass on v0.16.2.
 
 ## Remaining acceptance work (tracked in #2787)
 
@@ -146,9 +149,9 @@ that the complete upstream repository test suite was run.
   fixtures. This fork adds no upload UI, dependency replacement or production path.
 - Assess PDF/UA-2 separately if the application moves to PDF 2.0; current results
   cover only A-2a + UA-1 and do not establish insurer/notary legal requirements.
-- Keep this experiment local. Public fork/PR publication is not authorized; a
-  previous failed publication attempt is not a pending action. Avoid upstream
-  submission under the current upstream AI-contribution policy.
+- Keep customer documents and local app previews outside this repository. Publication
+  is authorized only to the user-owned `tp/pdfcpu` fork; avoid upstream submission
+  under the current upstream AI-contribution policy.
 
 This establishes that the narrow composition problem is tractable within a short
 prototype. It does not establish a three-day production fix for arbitrary uploads.

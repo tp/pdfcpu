@@ -12,7 +12,7 @@
   "buildDate" : 1791381120000
 }]},"jobs":[{"itemDetails":{
   "name" : "/root/worktrees/pdfcpu-2787-stationery/experiments/stationery/out/stock-watermark.pdf",
-  "size" : 34185
+  "size" : 34184
 },"validationResult":[ {
   "details" : {
     "passedRules" : 150,
@@ -121,16 +121,16 @@
   "statement" : "PDF file is not compliant with Validation Profile requirements.",
   "compliant" : false
 } ],"processingTime":{
-  "start" : 1792054634441,
-  "finish" : 1792054635663,
-  "duration" : "00:00:01.222",
-  "difference" : 1222
+  "start" : 1792059438268,
+  "finish" : 1792059439789,
+  "duration" : "00:00:01.521",
+  "difference" : 1521
 }}],"batchSummary":{
   "duration" : {
-    "start" : 1792054634265,
-    "finish" : 1792054635716,
-    "duration" : "00:00:01.451",
-    "difference" : 1451
+    "start" : 1792059438039,
+    "finish" : 1792059439885,
+    "duration" : "00:00:01.846",
+    "difference" : 1846
   },
   "totalJobs" : 1,
   "outOfMemory" : 0,
@@ -140,18 +140,18 @@
   "validationSummary" : {
     "nonCompliantPdfaCount" : 1,
     "compliantPdfaCount" : 0,
-    "totalJobCount" : 1,
     "failedJobCount" : 0,
+    "totalJobCount" : 1,
     "successfulJobCount" : 1
   },
   "featuresSummary" : {
-    "totalJobCount" : 0,
     "failedJobCount" : 0,
+    "totalJobCount" : 0,
     "successfulJobCount" : 0
   },
   "repairSummary" : {
-    "totalJobCount" : 0,
     "failedJobCount" : 0,
+    "totalJobCount" : 0,
     "successfulJobCount" : 0
   },
   "multiJob" : false

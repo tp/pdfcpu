@@ -38,16 +38,16 @@
   "statement" : "PDF file is compliant with Validation Profile requirements.",
   "compliant" : true
 } ],"processingTime":{
-  "start" : 1792054623410,
-  "finish" : 1792054624273,
-  "duration" : "00:00:00.863",
-  "difference" : 863
+  "start" : 1792059423734,
+  "finish" : 1792059424755,
+  "duration" : "00:00:01.021",
+  "difference" : 1021
 }}],"batchSummary":{
   "duration" : {
-    "start" : 1792054623222,
-    "finish" : 1792054624312,
-    "duration" : "00:00:01.090",
-    "difference" : 1090
+    "start" : 1792059423526,
+    "finish" : 1792059424819,
+    "duration" : "00:00:01.293",
+    "difference" : 1293
   },
   "totalJobs" : 1,
   "outOfMemory" : 0,

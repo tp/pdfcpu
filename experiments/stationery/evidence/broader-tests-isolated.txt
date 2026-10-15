@@ -1,0 +1,2 @@
+ok  	github.com/pdfcpu/pdfcpu/pkg/api/test	105.443s
+ok  	github.com/pdfcpu/pdfcpu/pkg/cli/test	76.515s

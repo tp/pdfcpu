@@ -12,7 +12,7 @@
   "buildDate" : 1791381120000
 }]},"jobs":[{"itemDetails":{
   "name" : "/root/worktrees/pdfcpu-2787-stationery/experiments/stationery/out/artifact-control.pdf",
-  "size" : 34077
+  "size" : 34083
 },"validationResult":[ {
   "details" : {
     "passedRules" : 153,
@@ -38,16 +38,16 @@
   "statement" : "PDF file is compliant with Validation Profile requirements.",
   "compliant" : true
 } ],"processingTime":{
-  "start" : 1792054637764,
-  "finish" : 1792054638971,
-  "duration" : "00:00:01.207",
-  "difference" : 1207
+  "start" : 1792059442792,
+  "finish" : 1792059445059,
+  "duration" : "00:00:02.267",
+  "difference" : 2267
 }}],"batchSummary":{
   "duration" : {
-    "start" : 1792054637587,
-    "finish" : 1792054639000,
-    "duration" : "00:00:01.413",
-    "difference" : 1413
+    "start" : 1792059442440,
+    "finish" : 1792059445145,
+    "duration" : "00:00:02.705",
+    "difference" : 2705
   },
   "totalJobs" : 1,
   "outOfMemory" : 0,

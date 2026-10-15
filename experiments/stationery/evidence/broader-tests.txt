@@ -1,2 +1,28 @@
-ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu	25.331s
-ok  	github.com/pdfcpu/pdfcpu/pkg/api	5.858s
+ok  	github.com/pdfcpu/pdfcpu/pkg/api	6.249s
+load test configuration: load automatic configuration at "/root/.config": configuration reset required at "/root/.config/pdfcpu/config.yml": detected schema version 0, required schema version 1\n
+FAIL	github.com/pdfcpu/pdfcpu/pkg/api/test	0.017s
+ok  	github.com/pdfcpu/pdfcpu/pkg/cli	0.829s
+load test configuration: load automatic configuration at "/root/.config": configuration reset required at "/root/.config/pdfcpu/config.yml": detected schema version 0, required schema version 1\n
+FAIL	github.com/pdfcpu/pdfcpu/pkg/cli/test	0.015s
+ok  	github.com/pdfcpu/pdfcpu/pkg/filter	0.508s
+ok  	github.com/pdfcpu/pdfcpu/pkg/font	0.248s
+ok  	github.com/pdfcpu/pdfcpu/pkg/log	0.011s
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu	33.899s
+?   	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/color	[no test files]
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/create	0.043s
+?   	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/draw	[no test files]
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/fault	0.021s
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/font	0.071s
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/form	0.345s
+?   	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/format	[no test files]
+?   	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/matrix	[no test files]
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/model	0.491s
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/pkcs7	0.655s
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/primitives	0.050s
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/safemath	0.014s
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/sanitize	0.015s
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/scan	0.015s
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/sign	38.558s
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/types	0.029s
+ok  	github.com/pdfcpu/pdfcpu/pkg/pdfcpu/validate	0.166s
+FAIL

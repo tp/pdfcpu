@@ -12,7 +12,7 @@
   "buildDate" : 1791381120000
 }]},"jobs":[{"itemDetails":{
   "name" : "/root/worktrees/pdfcpu-2787-stationery/experiments/stationery/out/composed-transparent.pdf",
-  "size" : 36482
+  "size" : 36497
 },"validationResult":[ {
   "details" : {
     "passedRules" : 153,
@@ -38,16 +38,16 @@
   "statement" : "PDF file is compliant with Validation Profile requirements.",
   "compliant" : true
 } ],"processingTime":{
-  "start" : 1792054630342,
-  "finish" : 1792054631671,
-  "duration" : "00:00:01.329",
-  "difference" : 1329
+  "start" : 1792059433339,
+  "finish" : 1792059434806,
+  "duration" : "00:00:01.467",
+  "difference" : 1467
 }}],"batchSummary":{
   "duration" : {
-    "start" : 1792054630137,
-    "finish" : 1792054631710,
-    "duration" : "00:00:01.573",
-    "difference" : 1573
+    "start" : 1792059433142,
+    "finish" : 1792059434854,
+    "duration" : "00:00:01.712",
+    "difference" : 1712
   },
   "totalJobs" : 1,
   "outOfMemory" : 0,
@@ -57,18 +57,18 @@
   "validationSummary" : {
     "nonCompliantPdfaCount" : 0,
     "compliantPdfaCount" : 1,
-    "failedJobCount" : 0,
     "totalJobCount" : 1,
+    "failedJobCount" : 0,
     "successfulJobCount" : 1
   },
   "featuresSummary" : {
-    "failedJobCount" : 0,
     "totalJobCount" : 0,
+    "failedJobCount" : 0,
     "successfulJobCount" : 0
   },
   "repairSummary" : {
-    "failedJobCount" : 0,
     "totalJobCount" : 0,
+    "failedJobCount" : 0,
     "successfulJobCount" : 0
   },
   "multiJob" : false

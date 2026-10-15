@@ -12,7 +12,7 @@
   "buildDate" : 1791381120000
 }]},"jobs":[{"itemDetails":{
   "name" : "/root/worktrees/pdfcpu-2787-stationery/experiments/stationery/out/missing-unicode.pdf",
-  "size" : 33657
+  "size" : 33484
 },"validationResult":[ {
   "details" : {
     "passedRules" : 152,
@@ -1062,16 +1062,16 @@
   "statement" : "PDF file is not compliant with Validation Profile requirements.",
   "compliant" : false
 } ],"processingTime":{
-  "start" : 1792054644674,
-  "finish" : 1792054645993,
-  "duration" : "00:00:01.319",
-  "difference" : 1319
+  "start" : 1792059452153,
+  "finish" : 1792059454038,
+  "duration" : "00:00:01.885",
+  "difference" : 1885
 }}],"batchSummary":{
   "duration" : {
-    "start" : 1792054644504,
-    "finish" : 1792054646079,
-    "duration" : "00:00:01.575",
-    "difference" : 1575
+    "start" : 1792059451931,
+    "finish" : 1792059454164,
+    "duration" : "00:00:02.233",
+    "difference" : 2233
   },
   "totalJobs" : 1,
   "outOfMemory" : 0,
@@ -1081,19 +1081,19 @@
   "validationSummary" : {
     "nonCompliantPdfaCount" : 1,
     "compliantPdfaCount" : 0,
-    "totalJobCount" : 1,
     "failedJobCount" : 0,
+    "totalJobCount" : 1,
     "successfulJobCount" : 1
   },
-  "multiJob" : false,
   "featuresSummary" : {
-    "totalJobCount" : 0,
     "failedJobCount" : 0,
+    "totalJobCount" : 0,
     "successfulJobCount" : 0
   },
   "repairSummary" : {
-    "totalJobCount" : 0,
     "failedJobCount" : 0,
+    "totalJobCount" : 0,
     "successfulJobCount" : 0
-  }
+  },
+  "multiJob" : false
 }}}

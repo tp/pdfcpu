@@ -12,7 +12,7 @@
   "buildDate" : 1791381120000
 }]},"jobs":[{"itemDetails":{
   "name" : "/root/worktrees/pdfcpu-2787-stationery/experiments/stationery/out/missing-font.pdf",
-  "size" : 18469
+  "size" : 18286
 },"validationResult":[ {
   "details" : {
     "passedRules" : 152,
@@ -102,16 +102,16 @@
   "statement" : "PDF file is not compliant with Validation Profile requirements.",
   "compliant" : false
 } ],"processingTime":{
-  "start" : 1792054641401,
-  "finish" : 1792054642647,
-  "duration" : "00:00:01.246",
-  "difference" : 1246
+  "start" : 1792059448166,
+  "finish" : 1792059449777,
+  "duration" : "00:00:01.611",
+  "difference" : 1611
 }}],"batchSummary":{
   "duration" : {
-    "start" : 1792054641204,
-    "finish" : 1792054642721,
-    "duration" : "00:00:01.517",
-    "difference" : 1517
+    "start" : 1792059447959,
+    "finish" : 1792059449884,
+    "duration" : "00:00:01.925",
+    "difference" : 1925
   },
   "totalJobs" : 1,
   "outOfMemory" : 0,
@@ -121,18 +121,18 @@
   "validationSummary" : {
     "nonCompliantPdfaCount" : 1,
     "compliantPdfaCount" : 0,
-    "totalJobCount" : 1,
     "failedJobCount" : 0,
+    "totalJobCount" : 1,
     "successfulJobCount" : 1
   },
   "featuresSummary" : {
-    "totalJobCount" : 0,
     "failedJobCount" : 0,
+    "totalJobCount" : 0,
     "successfulJobCount" : 0
   },
   "repairSummary" : {
-    "totalJobCount" : 0,
     "failedJobCount" : 0,
+    "totalJobCount" : 0,
     "successfulJobCount" : 0
   },
   "multiJob" : false
