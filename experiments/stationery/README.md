@@ -29,11 +29,11 @@ PDF/A-2a and PDF/UA-1 on the tested corpus.
    pages are all exposed. The logical order is the original body followed by
    all six stationery paragraphs. That repetition and placement require a
    product decision and an actual screen-reader audit.
-4. **Independent validation — automated gates passed; publication partial.**
+4. **Independent validation — automated gates passed; real-document audit open.**
    veraPDF 1.30.3 checks both declared profiles on the exact final files. Negative
    controls also prove that conformance alone is insufficient. A local fork,
-   sources and evidence are available; GitHub fork creation returned HTTP 403
-   because the current token cannot create the fork.
+   sources and evidence are available. The user explicitly directed that the fork
+   and any PR remain unpublished during this investigation.
 
 ## What the fork changes
 
@@ -146,8 +146,9 @@ that the complete upstream repository test suite was run.
   fixtures. This fork adds no upload UI, dependency replacement or production path.
 - Assess PDF/UA-2 separately if the application moves to PDF 2.0; current results
   cover only A-2a + UA-1 and do not establish insurer/notary legal requirements.
-- Publish the local fork when credentials permit. Avoid upstream submission under
-  the current upstream AI-contribution policy.
+- Keep this experiment local. Public fork/PR publication is not authorized; a
+  previous failed publication attempt is not a pending action. Avoid upstream
+  submission under the current upstream AI-contribution policy.
 
 This establishes that the narrow composition problem is tractable within a short
 prototype. It does not establish a three-day production fix for arbitrary uploads.
