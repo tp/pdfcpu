@@ -1,0 +1,75 @@
+{"report":{"buildInformation":{"releaseDetails":[{
+  "id" : "core",
+  "version" : "1.30.3",
+  "buildDate" : 1791367320000
+},{
+  "id" : "validation-model",
+  "version" : "1.30.3",
+  "buildDate" : 1791380640000
+},{
+  "id" : "apps",
+  "version" : "1.30.3",
+  "buildDate" : 1791381120000
+}]},"jobs":[{"itemDetails":{
+  "name" : "/root/worktrees/pdfcpu-2787-stationery/experiments/stationery/out/roundtrip.pdf",
+  "size" : 21548
+},"validationResult":[ {
+  "details" : {
+    "passedRules" : 153,
+    "failedRules" : 0,
+    "passedChecks" : 3762,
+    "failedChecks" : 0,
+    "ruleSummaries" : [ ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/A-2a validation profile",
+  "statement" : "PDF file is compliant with Validation Profile requirements.",
+  "compliant" : true
+}, {
+  "details" : {
+    "passedRules" : 106,
+    "failedRules" : 0,
+    "passedChecks" : 1580,
+    "failedChecks" : 0,
+    "ruleSummaries" : [ ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/UA-1 validation profile",
+  "statement" : "PDF file is compliant with Validation Profile requirements.",
+  "compliant" : true
+} ],"processingTime":{
+  "start" : 1792054619540,
+  "finish" : 1792054620739,
+  "duration" : "00:00:01.199",
+  "difference" : 1199
+}}],"batchSummary":{
+  "duration" : {
+    "start" : 1792054619347,
+    "finish" : 1792054620780,
+    "duration" : "00:00:01.433",
+    "difference" : 1433
+  },
+  "totalJobs" : 1,
+  "outOfMemory" : 0,
+  "veraExceptions" : 0,
+  "failedEncryptedJobs" : 0,
+  "failedParsingJobs" : 0,
+  "validationSummary" : {
+    "nonCompliantPdfaCount" : 0,
+    "compliantPdfaCount" : 1,
+    "failedJobCount" : 0,
+    "totalJobCount" : 1,
+    "successfulJobCount" : 1
+  },
+  "featuresSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "repairSummary" : {
+    "failedJobCount" : 0,
+    "totalJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "multiJob" : false
+}}}

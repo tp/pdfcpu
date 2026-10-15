@@ -1,0 +1,5 @@
+--- FAIL: TestInspectConfigurationReportsReadOnlyPaths (0.02s)
+    configuration_inspection_test.go:376: unexpected read-only path inspection: {Path:/tmp/TestInspectConfigurationReportsReadOnlyPaths1934082420/001 Available:true Exists:true Writable:true}
+FAIL
+FAIL	github.com/pdfcpu/pdfcpu/pkg/api	0.040s
+FAIL

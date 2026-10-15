@@ -1,0 +1,1099 @@
+{"report":{"buildInformation":{"releaseDetails":[{
+  "id" : "core",
+  "version" : "1.30.3",
+  "buildDate" : 1791367320000
+},{
+  "id" : "validation-model",
+  "version" : "1.30.3",
+  "buildDate" : 1791380640000
+},{
+  "id" : "apps",
+  "version" : "1.30.3",
+  "buildDate" : 1791381120000
+}]},"jobs":[{"itemDetails":{
+  "name" : "/root/worktrees/pdfcpu-2787-stationery/experiments/stationery/out/missing-unicode.pdf",
+  "size" : 33657
+},"validationResult":[ {
+  "details" : {
+    "passedRules" : 152,
+    "failedRules" : 1,
+    "passedChecks" : 6264,
+    "failedChecks" : 513,
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-2:2011",
+      "clause" : "6.2.11.7.2",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 513,
+      "description" : "The Font dictionary of all fonts shall define the map of all used character codes to Unicode values, either via a ToUnicode entry, or other mechanisms as defined in ISO 19005-2, 6.2.11.7.2",
+      "object" : "Glyph",
+      "test" : "toUnicode != null",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[0](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 1 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[3](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 4 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[7](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 8 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[10](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 3 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[11](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 9 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[12](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 10 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[13](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 11 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[14](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 5 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[15](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 6 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[16](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 2 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[17](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 12 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[18](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 13 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[19](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 7 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[20](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 14 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[21](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 15 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[22](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 16 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[23](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 17 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[1](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 2 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[2](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 3 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[7](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 4 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[8](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 5 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[10](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 8 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[11](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 9 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[15](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 11 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[17](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 12 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[20](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 13 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[22](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 10 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[23](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 14 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[24](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 1 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[25](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 15 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[26](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 6 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[27](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 7 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[28](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 16 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[29](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 17 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[30](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 18 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[0](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 19 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[5](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 22 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[6](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 23 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[8](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 24 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[15](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 27 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[17](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 28 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[19](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 29 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[24](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 31 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[27](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 9 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[29](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 3 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[33](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 32 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[40](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 2 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[41](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 25 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[47](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 33 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[48](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 34 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[50](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 4 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[51](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 26 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[55](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 20 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[56](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 21 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[60](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 6 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[62](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 16 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[63](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 17 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[64](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 18 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[68](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 35 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[69](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 36 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[70](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 15 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[79](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 12 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[81](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 40 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[82](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 41 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[83](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 5 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[84](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 42 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[85](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 43 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[86](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 30 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[87](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 44 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[88](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 7 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[89](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 45 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[91](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 46 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[92](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 47 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[93](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 10 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[94](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 11 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[95](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 37 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[96](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 38 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[97](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 14 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[98](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 39 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[99](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 48 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[100](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 49 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[101](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 50 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[102](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 1 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[5](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 51 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[7](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 52 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[9](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 6 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[10](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 4 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[11](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 5 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[13](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 53 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[15](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 8 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[16](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 16 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[17](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 54 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[19](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 7 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[20](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 30 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[21](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 17 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[22](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 18 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[23](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 26 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[24](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 45 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[25](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 20 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[26](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 29 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/A-2a validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+}, {
+  "details" : {
+    "passedRules" : 105,
+    "failedRules" : 1,
+    "passedChecks" : 2752,
+    "failedChecks" : 513,
+    "tags" : [ "font" ],
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-1:2014",
+      "clause" : "7.21.7",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 513,
+      "tags" : [ "font" ],
+      "description" : "The Font dictionary of all fonts shall define the map of all used character codes to Unicode values, either via a ToUnicode entry, or other mechanisms as defined in ISO 14289-1, 7.21.7",
+      "object" : "Glyph",
+      "test" : "toUnicode != null",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[0](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 1 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[3](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 4 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[7](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 8 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[10](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 3 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[11](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 9 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[12](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 10 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[13](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 11 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[14](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 5 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[15](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 6 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[16](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 2 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[17](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 12 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[18](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 13 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[19](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 7 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[20](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 14 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[21](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 15 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[22](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 16 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/usedGlyphs[23](CKWEPY+LibertinusSerif-Bold CKWEPY+LibertinusSerif-Bold 17 0 505968231 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[1](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 2 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[2](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 3 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[7](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 4 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[8](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 5 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[10](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 8 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[11](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 9 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[15](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 11 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[17](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 12 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[20](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 13 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[22](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 10 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[23](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 14 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[24](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 1 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[25](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 15 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[26](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 6 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[27](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 7 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[28](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 16 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[29](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 17 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/usedGlyphs[30](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 18 0 1944138464 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[0](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 19 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[5](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 22 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[6](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 23 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[8](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 24 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[15](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 27 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[17](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 28 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[19](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 29 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[24](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 31 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[27](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 9 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[29](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 3 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[33](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 32 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[40](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 2 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[41](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 25 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[47](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 33 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[48](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 34 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[50](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 4 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[51](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 26 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[55](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 20 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[56](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 21 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[60](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 6 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[62](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 16 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[63](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 17 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[64](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 18 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[68](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 35 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[69](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 36 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[70](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 15 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[79](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 12 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[81](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 40 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[82](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 41 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[83](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 5 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[84](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 42 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[85](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 43 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[86](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 30 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[87](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 44 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[88](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 7 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[89](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 45 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[91](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 46 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[92](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 47 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[93](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 10 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[94](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 11 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[95](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 37 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[96](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 38 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[97](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 14 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[98](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 39 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[99](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 48 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[100](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 49 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[101](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 50 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[48]/usedGlyphs[102](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 1 0 1486553742 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[5](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 51 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[7](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 52 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[9](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 6 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[10](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 4 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[11](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 5 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[13](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 53 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[15](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 8 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[16](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 16 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[17](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 54 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[19](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 7 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[20](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 30 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[21](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 17 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[22](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 18 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[23](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 26 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[24](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 45 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[25](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 20 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[61]/usedGlyphs[26](NVIOWN+LibertinusSerif-Regular NVIOWN+LibertinusSerif-Regular 29 0 594195094 5 true)",
+        "errorMessage" : "The glyph can not be mapped to Unicode",
+        "errorArguments" : [ ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/UA-1 validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+} ],"processingTime":{
+  "start" : 1792054644674,
+  "finish" : 1792054645993,
+  "duration" : "00:00:01.319",
+  "difference" : 1319
+}}],"batchSummary":{
+  "duration" : {
+    "start" : 1792054644504,
+    "finish" : 1792054646079,
+    "duration" : "00:00:01.575",
+    "difference" : 1575
+  },
+  "totalJobs" : 1,
+  "outOfMemory" : 0,
+  "veraExceptions" : 0,
+  "failedEncryptedJobs" : 0,
+  "failedParsingJobs" : 0,
+  "validationSummary" : {
+    "nonCompliantPdfaCount" : 1,
+    "compliantPdfaCount" : 0,
+    "totalJobCount" : 1,
+    "failedJobCount" : 0,
+    "successfulJobCount" : 1
+  },
+  "multiJob" : false,
+  "featuresSummary" : {
+    "totalJobCount" : 0,
+    "failedJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "repairSummary" : {
+    "totalJobCount" : 0,
+    "failedJobCount" : 0,
+    "successfulJobCount" : 0
+  }
+}}}

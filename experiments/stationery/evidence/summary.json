@@ -1,0 +1,174 @@
+{
+  "versions": {
+    "typst": "typst 0.15.0 (3ae52774)",
+    "verapdf": "veraPDF 1.30.3\nBuilt: Wed Oct 07 13:52:00 UTC 2026\nDeveloped and released by the veraPDF Consortium.\nFunded by the PREFORMA project.\nReleased under the GNU General Public License v3\nand the Mozilla Public License v2 or later.",
+    "qpdf": "qpdf version 12.2.0",
+    "go": "go version go1.26.8 linux/amd64"
+  },
+  "validation": {
+    "body": [
+      {
+        "profile": "PDF/A-2a validation profile",
+        "compliant": true,
+        "passed_checks": 3700,
+        "failed_checks": 0
+      },
+      {
+        "profile": "PDF/UA-1 validation profile",
+        "compliant": true,
+        "passed_checks": 1580,
+        "failed_checks": 0
+      }
+    ],
+    "letterhead": [
+      {
+        "profile": "PDF/A-2a validation profile",
+        "compliant": true,
+        "passed_checks": 1587,
+        "failed_checks": 0
+      },
+      {
+        "profile": "PDF/UA-1 validation profile",
+        "compliant": true,
+        "passed_checks": 587,
+        "failed_checks": 0
+      }
+    ],
+    "roundtrip": [
+      {
+        "profile": "PDF/A-2a validation profile",
+        "compliant": true,
+        "passed_checks": 3762,
+        "failed_checks": 0
+      },
+      {
+        "profile": "PDF/UA-1 validation profile",
+        "compliant": true,
+        "passed_checks": 1580,
+        "failed_checks": 0
+      }
+    ],
+    "transparent": [
+      {
+        "profile": "PDF/A-2a validation profile",
+        "compliant": true,
+        "passed_checks": 1701,
+        "failed_checks": 0
+      },
+      {
+        "profile": "PDF/UA-1 validation profile",
+        "compliant": true,
+        "passed_checks": 594,
+        "failed_checks": 0
+      }
+    ],
+    "composed": [
+      {
+        "profile": "PDF/A-2a validation profile",
+        "compliant": true,
+        "passed_checks": 6827,
+        "failed_checks": 0
+      },
+      {
+        "profile": "PDF/UA-1 validation profile",
+        "compliant": true,
+        "passed_checks": 3265,
+        "failed_checks": 0
+      }
+    ],
+    "composed-transparent": [
+      {
+        "profile": "PDF/A-2a validation profile",
+        "compliant": true,
+        "passed_checks": 6980,
+        "failed_checks": 0
+      },
+      {
+        "profile": "PDF/UA-1 validation profile",
+        "compliant": true,
+        "passed_checks": 3286,
+        "failed_checks": 0
+      }
+    ],
+    "stock-watermark": [
+      {
+        "profile": "PDF/A-2a validation profile",
+        "compliant": false,
+        "passed_checks": 4989,
+        "failed_checks": 3
+      },
+      {
+        "profile": "PDF/UA-1 validation profile",
+        "compliant": false,
+        "passed_checks": 1977,
+        "failed_checks": 2
+      }
+    ],
+    "artifact-control": [
+      {
+        "profile": "PDF/A-2a validation profile",
+        "compliant": true,
+        "passed_checks": 4980,
+        "failed_checks": 0
+      },
+      {
+        "profile": "PDF/UA-1 validation profile",
+        "compliant": true,
+        "passed_checks": 1979,
+        "failed_checks": 0
+      }
+    ],
+    "missing-font": [
+      {
+        "profile": "PDF/A-2a validation profile",
+        "compliant": false,
+        "passed_checks": 6781,
+        "failed_checks": 4
+      },
+      {
+        "profile": "PDF/UA-1 validation profile",
+        "compliant": false,
+        "passed_checks": 3261,
+        "failed_checks": 4
+      }
+    ],
+    "missing-unicode": [
+      {
+        "profile": "PDF/A-2a validation profile",
+        "compliant": false,
+        "passed_checks": 6264,
+        "failed_checks": 513
+      },
+      {
+        "profile": "PDF/UA-1 validation profile",
+        "compliant": false,
+        "passed_checks": 2752,
+        "failed_checks": 513
+      }
+    ]
+  },
+  "fidelity": {
+    "roundtrip": "all three pages pixel-identical; text positions unchanged",
+    "composed": {
+      "stationery_paragraphs": 6,
+      "tagged_text_runs": 12,
+      "original_font_programs_preserved": true,
+      "pixels": "all three pages identical to independent qpdf composition at 100 dpi"
+    },
+    "composed-transparent": {
+      "stationery_paragraphs": 6,
+      "tagged_text_runs": 12,
+      "original_font_programs_preserved": true,
+      "pixels": "all three pages identical to independent qpdf composition at 100 dpi"
+    }
+  },
+  "negative_controls": {
+    "artifact-control": "correctly rejected by semantic gate: body structure changed",
+    "missing-stationery": "correctly rejected despite both profiles passing",
+    "missing-font": "correctly rejected by both veraPDF profiles",
+    "missing-unicode": "correctly rejected by both veraPDF profiles"
+  },
+  "screen_reader": "NOT PERFORMED: structural inspection is not a screen-reader audit",
+  "reading_order": "Body first, followed by six stationery paragraphs (all three occurrences). Repetition/order refinement remains open.",
+  "unit_tests": "=== RUN   TestPreparedStationeryPreservesContentAndStructure\n--- PASS: TestPreparedStationeryPreservesContentAndStructure (0.03s)\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/untagged\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/annotation\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/rotation\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/crop\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/origin\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/destination-geometry\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/destination-user-unit\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/javascript\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/attachment\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/layers\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/unsupported-role\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/paragraph-attribute\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/document-attribute\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/remapped-role\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/parent-tree-limits\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/duplicate-mcid\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/missing-mcid\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/parent-tree\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/cmyk-profile\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/different-profile\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/multipage\n=== RUN   TestPreparedStationeryRejectsUnsupportedInputs/cancelled\n--- PASS: TestPreparedStationeryRejectsUnsupportedInputs (0.19s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/untagged (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/annotation (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/rotation (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/crop (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/origin (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/destination-geometry (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/destination-user-unit (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/javascript (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/attachment (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/layers (0.00s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/unsupported-role (0.00s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/paragraph-attribute (0.00s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/document-attribute (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/remapped-role (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/parent-tree-limits (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/duplicate-mcid (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/missing-mcid (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/parent-tree (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/cmyk-profile (0.00s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/different-profile (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/multipage (0.01s)\n    --- PASS: TestPreparedStationeryRejectsUnsupportedInputs/cancelled (0.01s)\nPASS\nok  \tgithub.com/pdfcpu/pdfcpu/pkg/pdfcpu\t0.234s\n"
+}

@@ -1,0 +1,158 @@
+{"report":{"buildInformation":{"releaseDetails":[{
+  "id" : "core",
+  "version" : "1.30.3",
+  "buildDate" : 1791367320000
+},{
+  "id" : "validation-model",
+  "version" : "1.30.3",
+  "buildDate" : 1791380640000
+},{
+  "id" : "apps",
+  "version" : "1.30.3",
+  "buildDate" : 1791381120000
+}]},"jobs":[{"itemDetails":{
+  "name" : "/root/worktrees/pdfcpu-2787-stationery/experiments/stationery/out/stock-watermark.pdf",
+  "size" : 34185
+},"validationResult":[ {
+  "details" : {
+    "passedRules" : 150,
+    "failedRules" : 3,
+    "passedChecks" : 4989,
+    "failedChecks" : 3,
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-2:2011",
+      "clause" : "6.9",
+      "testNumber" : 3,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "description" : "If an optional content configuration dictionary contains the Order key, the array which is the value of this Order key shall contain references to all OCGs in the conforming file",
+      "object" : "PDOCConfig",
+      "test" : "OCGsNotContainedInOrder == null",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/OCProperties[0]/D[0]",
+        "errorMessage" : "Optional content group(s) Background not present in the Order entry of the optional content configuration dictionary",
+        "errorArguments" : [ "Background" ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-2:2011",
+      "clause" : "6.9",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "description" : "Each optional content configuration dictionary that forms the value of the D key, or that is an element in the array that forms the value of the Configs key in the OCProperties dictionary, shall contain the Name key",
+      "object" : "PDOCConfig",
+      "test" : "Name != null && Name.length() > 0",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/OCProperties[0]/D[0]",
+        "errorMessage" : "Missing or empty Name entry of the optional content configuration dictionary",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-2:2011",
+      "clause" : "6.9",
+      "testNumber" : 4,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "description" : "The AS key shall not appear in any optional content configuration dictionary",
+      "object" : "PDOCConfig",
+      "test" : "AS == null",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/OCProperties[0]/D[0]",
+        "errorMessage" : "AS key is present in the optional content configuration dictionary",
+        "errorArguments" : [ ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/A-2a validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+}, {
+  "details" : {
+    "passedRules" : 104,
+    "failedRules" : 2,
+    "passedChecks" : 1977,
+    "failedChecks" : 2,
+    "tags" : [ "syntax" ],
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-1:2014",
+      "clause" : "7.10",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "syntax" ],
+      "description" : "Each optional content configuration dictionary that forms the value of the D key, or that is an element in the array that forms the value of the Configs key in the OCProperties dictionary, shall contain the Name key",
+      "object" : "PDOCConfig",
+      "test" : "Name != null && Name.length() > 0",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/OCProperties[0]/D[0]",
+        "errorMessage" : "Missing or empty Name entry of the optional content configuration dictionary",
+        "errorArguments" : [ ]
+      } ]
+    }, {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-1:2014",
+      "clause" : "7.10",
+      "testNumber" : 2,
+      "status" : "failed",
+      "failedChecks" : 1,
+      "tags" : [ "syntax" ],
+      "description" : "The AS key shall not appear in any optional content configuration dictionary",
+      "object" : "PDOCConfig",
+      "test" : "AS == null",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/OCProperties[0]/D[0]",
+        "errorMessage" : "AS key is present in the optional content configuration dictionary",
+        "errorArguments" : [ ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/UA-1 validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+} ],"processingTime":{
+  "start" : 1792054634441,
+  "finish" : 1792054635663,
+  "duration" : "00:00:01.222",
+  "difference" : 1222
+}}],"batchSummary":{
+  "duration" : {
+    "start" : 1792054634265,
+    "finish" : 1792054635716,
+    "duration" : "00:00:01.451",
+    "difference" : 1451
+  },
+  "totalJobs" : 1,
+  "outOfMemory" : 0,
+  "veraExceptions" : 0,
+  "failedEncryptedJobs" : 0,
+  "failedParsingJobs" : 0,
+  "validationSummary" : {
+    "nonCompliantPdfaCount" : 1,
+    "compliantPdfaCount" : 0,
+    "totalJobCount" : 1,
+    "failedJobCount" : 0,
+    "successfulJobCount" : 1
+  },
+  "featuresSummary" : {
+    "totalJobCount" : 0,
+    "failedJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "repairSummary" : {
+    "totalJobCount" : 0,
+    "failedJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "multiJob" : false
+}}}

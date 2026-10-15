@@ -1,0 +1,139 @@
+{"report":{"buildInformation":{"releaseDetails":[{
+  "id" : "core",
+  "version" : "1.30.3",
+  "buildDate" : 1791367320000
+},{
+  "id" : "validation-model",
+  "version" : "1.30.3",
+  "buildDate" : 1791380640000
+},{
+  "id" : "apps",
+  "version" : "1.30.3",
+  "buildDate" : 1791381120000
+}]},"jobs":[{"itemDetails":{
+  "name" : "/root/worktrees/pdfcpu-2787-stationery/experiments/stationery/out/missing-font.pdf",
+  "size" : 18469
+},"validationResult":[ {
+  "details" : {
+    "passedRules" : 152,
+    "failedRules" : 1,
+    "passedChecks" : 6781,
+    "failedChecks" : 4,
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 19005-2:2011",
+      "clause" : "6.2.11.4.1",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 4,
+      "description" : "The font programs for all fonts used for rendering within a conforming file shall be embedded within that file, as defined in ISO 32000-1:2008, 9.9",
+      "object" : "PDFont",
+      "test" : "Subtype == \"Type3\" || Subtype == \"Type0\" || renderingMode == 3 || containsFontFile == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/font[0](CKWEPY+LibertinusSerif-Bold)/DescendantFonts[0](CKWEPY+LibertinusSerif-Bold)",
+        "errorMessage" : "The font program is not embedded",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/font[0](NVIOWN+LibertinusSerif-Regular)/DescendantFonts[0](NVIOWN+LibertinusSerif-Regular)",
+        "errorMessage" : "The font program is not embedded",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[12]/font[0](QTQXUO+LibertinusSerif-Bold)/DescendantFonts[0](QTQXUO+LibertinusSerif-Bold)",
+        "errorMessage" : "The font program is not embedded",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[38]/font[0](OJVLJM+LibertinusSerif-Regular)/DescendantFonts[0](OJVLJM+LibertinusSerif-Regular)",
+        "errorMessage" : "The font program is not embedded",
+        "errorArguments" : [ ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/A-2a validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+}, {
+  "details" : {
+    "passedRules" : 105,
+    "failedRules" : 1,
+    "passedChecks" : 3261,
+    "failedChecks" : 4,
+    "tags" : [ "font" ],
+    "ruleSummaries" : [ {
+      "ruleStatus" : "FAILED",
+      "specification" : "ISO 14289-1:2014",
+      "clause" : "7.21.4.1",
+      "testNumber" : 1,
+      "status" : "failed",
+      "failedChecks" : 4,
+      "tags" : [ "font" ],
+      "description" : "The font programs for all fonts used for rendering within a conforming file shall be embedded within that file, as defined in ISO 32000-1:2008, 9.9",
+      "object" : "PDFont",
+      "test" : "Subtype == \"Type3\" || Subtype == \"Type0\" || renderingMode == 3 || containsFontFile == true",
+      "checks" : [ {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[9]/font[0](CKWEPY+LibertinusSerif-Bold)/DescendantFonts[0](CKWEPY+LibertinusSerif-Bold)",
+        "errorMessage" : "The font program is not embedded",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[1]/xObject[0]/contentStream[0](94 0 obj PDSemanticContentStream)/operators[22]/font[0](NVIOWN+LibertinusSerif-Regular)/DescendantFonts[0](NVIOWN+LibertinusSerif-Regular)",
+        "errorMessage" : "The font program is not embedded",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[12]/font[0](QTQXUO+LibertinusSerif-Bold)/DescendantFonts[0](QTQXUO+LibertinusSerif-Bold)",
+        "errorMessage" : "The font program is not embedded",
+        "errorArguments" : [ ]
+      }, {
+        "status" : "failed",
+        "context" : "root/document[0]/pages[0](60 0 obj PDPage)/contentStream[0]/operators[38]/font[0](OJVLJM+LibertinusSerif-Regular)/DescendantFonts[0](OJVLJM+LibertinusSerif-Regular)",
+        "errorMessage" : "The font program is not embedded",
+        "errorArguments" : [ ]
+      } ]
+    } ]
+  },
+  "jobEndStatus" : "normal",
+  "profileName" : "PDF/UA-1 validation profile",
+  "statement" : "PDF file is not compliant with Validation Profile requirements.",
+  "compliant" : false
+} ],"processingTime":{
+  "start" : 1792054641401,
+  "finish" : 1792054642647,
+  "duration" : "00:00:01.246",
+  "difference" : 1246
+}}],"batchSummary":{
+  "duration" : {
+    "start" : 1792054641204,
+    "finish" : 1792054642721,
+    "duration" : "00:00:01.517",
+    "difference" : 1517
+  },
+  "totalJobs" : 1,
+  "outOfMemory" : 0,
+  "veraExceptions" : 0,
+  "failedEncryptedJobs" : 0,
+  "failedParsingJobs" : 0,
+  "validationSummary" : {
+    "nonCompliantPdfaCount" : 1,
+    "compliantPdfaCount" : 0,
+    "totalJobCount" : 1,
+    "failedJobCount" : 0,
+    "successfulJobCount" : 1
+  },
+  "featuresSummary" : {
+    "totalJobCount" : 0,
+    "failedJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "repairSummary" : {
+    "totalJobCount" : 0,
+    "failedJobCount" : 0,
+    "successfulJobCount" : 0
+  },
+  "multiJob" : false
+}}}
